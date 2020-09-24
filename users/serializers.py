@@ -79,7 +79,6 @@ class UserSignUpSerializer(serializers.Serializer):
             raise serializers.ValidationError('As senhas informadas não coincidem!')
 
         password_validation.validate_password(passwd)
-
         return data
 
     # Método para criar o novo usuário
