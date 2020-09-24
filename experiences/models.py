@@ -7,7 +7,11 @@ from ckeditor.fields import RichTextField
 class Experience(models.Model):
     """ Modelo de experiencia de trabalho """
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+           User, 
+           on_delete=models.CASCADE,
+           related_name='experience'
+         )
     date_ini = models.DateTimeField()
     date_end = models.DateTimeField(null=True)
     company = models.CharField(max_length=255)

@@ -6,7 +6,11 @@ from ckeditor.fields import RichTextField
 class Extra(models.Model):
     """ Modelo de formações extra-curriculares """
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+           User, 
+           on_delete=models.CASCADE,
+           related_name='extra_education'
+         )
     expedition = models.DateTimeField()
     title = models.CharField(max_length=255)
     url = models.URLField(null=True)

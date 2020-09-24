@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'projects',
     'education',
     'extras',
+    'search',
 ]
 
 REST_FRAMEWORK = {
